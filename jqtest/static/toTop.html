@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>返回顶部的第一种方式</title>
+<style>
+.top{ width:50px; height:50px; display:block; background:#888; color:#fff; text-align:center; font-size:30px; line-height:50px; text-decoration:none; position:fixed; right:50px; bottom:50px; display:none;}
+.top:hover{ background:#093}
+
+</style>
+
+
+<script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript">
+
+$(function(){
+$(window).scroll(function(){
+	var t=$(window).scrollTop();
+	if(t>200){
+		$('.top').fadeIn();
+	}else{
+		$('.top').fadeOut();
+	}
+})
+$('.top').click(function(){
+	$('body').animate({scrollTop:0},300);
+})
+
+})
+
+
+
+
+
+
+
+</script>
+
+
+</head>
+
+<body>
+
+<a href="javascript:;" class="top">∧</a>
+
+
+<script>
+
+for(var i=0; i<100; i++){
+	document.write("<h1>"+i+"</h1>")	
+}
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>逐次加载案例</title>
+<style>
+*{padding:0; margin:0}
+.header{ height:400px; width:100%; background:#0C6}
+
+.banner{ height:600px; width:100%; background:#FC3; margin:30px auto; text-align:center; overflow:hidden;}
+.banner h1{ font-size:30px;  padding:80px 0; position:relative; top:400px; 
+transition:0.5s 0.3s;}
+.banner p{ font-size:18px; color:#000;  width:80%; margin:50px auto; line-height:1.8em; position:relative; top:400px; transition:0.5s 0.8s;}
+
+.banner.on h1{ top:0}
+.banner.on p{ top:0;}
+
+
+
+
+.con{ width:800px; height:500px; margin:30px auto; border:1px solid red; overflow:hidden;}
+.con_l{ float:left; position:relative; left:-371px; transition:0.5s;}
+.con_r{ float:right; position:relative; right:-371px; transition:0.5s;}
+.con.on .con_l{ left:0;}
+.con.on .con_r{ right:0;}
+
+
+
+
+.news{ width:1000px; height:400px; margin:30px auto; background:#390}
+.footer{ width:100%; height:100px; background:#F96}
+
+</style>
+
+<script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript">
+
+$(function(){
+
+	function addclass(e){
+		var winHeight=$(window).height()*0.5;
+		var t=$(e).offset().top;
+		var srolltop=$(window).scrollTop();
+		if(srolltop>t-winHeight){
+			$(e).addClass('on')
+		}
+	}
+
+	$(window).scroll(function(){
+		addclass(".banner")
+		addclass(".con")
+	})
+
+})
+
+</script>
+
+</head>
+<body>
+<div class="header"></div>
+
+<div class="banner">
+	<h1>极客学院</h1>
+    <p>极客学院[1]  是中国android开发在线学习平台，汇集了几十名国内顶尖的有多年项目和实战经验的Android开发授课大师，精心制作了上千个高质量视频教程，涵盖了Android开发学习的基础入门、中级进阶，高级提升、项目实战开发等专业的android开发课程。
+极客学院[2]  背后是一支疯狂喜欢编程，狂热开发移动app的超有活力团队。他们希望通过最新的，高质量的，专业实战的在线开发课程打破传统的编程学习模式，以新一代的编程学习模式帮助开发者更快更好的学习Android开发，帮助开发者通过技术实现自己的理想。
+作为国内最大IT职业在线教育平台，极客学院一直致力于“让学习更有效”，帮助IT从业者在最短的时间内获得最多的知识，技能得到最快的提升。目前，极客学院已拥有60多万IT从业者用户。</p>
+</div>
+
+<div class="con">
+	<div class="con_l"><img src="../images/kc1.png" alt="" /></div>
+    <div class="con_r"><img src="../images/kc2.png" alt="" /></div>
+</div>
+
+<div class="news"></div>
+
+<div class="footer"></div>
+
+
+</body>
+</html>

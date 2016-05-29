@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>滚动条的方向</title>
+
+<style>
+*{padding:0; margin:0}
+.nav{ height:100px; width:100%; background:rgba(0,0,0,0.5); position:fixed; top:-100px;left:0; transition:0.5s;}
+.nav.on{ top:0}
+
+</style>
+<script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('.nav').addClass('on');
+	var top1 =$(window).scrollTop();
+		$(window).scroll(function(){
+			var top2=$(window).scrollTop();
+			if(top2>top1){
+				$('.nav').removeClass('on');
+			}else{
+				$('.nav').addClass('on');
+			}
+			top1=top2;
+		})
+	
+})
+
+</script>
+
+</head>
+
+<body>
+
+<div class="nav">
+
+</div>
+
+
+
+<script>
+for(var i=0; i<100; i++){
+	document.write("<h1>"+i+"</h1>")	
+}
+
+
+
+</script>
+
+
+</body>
+</html>

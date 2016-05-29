@@ -1,0 +1,34 @@
+ul,h2{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+#list{
+    width: 150px;
+    border: 1px solid gainsboro;
+    margin: 0 auto;
+}
+.lis h2{
+    line-height: 30px;
+   text-indent: 20px;
+    font-size: 18px;
+    background: #fbffbc url("img/ico1.gif")no-repeat 5px center;
+}
+.lis li{
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-bottom: 1px solid gainsboro;
+}
+.lis ul{
+    display: none;
+}
+.lis .hover{
+    background: rgba(182, 85, 188, 0.13) url("img/ico2.gif")no-repeat 5px center ;
+}
+.lis .select{
+    background: #e4b4ff;
+}
