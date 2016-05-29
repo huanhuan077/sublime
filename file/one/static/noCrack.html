@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>无缝滚动</title>
+	<style type="text/css">
+	div,ul{
+		padding: 0;
+		margin: 0;
+	}
+		.area{
+			width: 300px;
+			background: #efefef;
+			height: 200px;
+			overflow: hidden;
+			color: #666;
+			margin: 30px auto;
+			padding: 6px 10px;
+			text-align: center;
+		}
+		.wrap{
+		width: 300px;
+		background: #efefef;
+		height: 30px;
+		overflow: hidden;
+		color: #666;
+		margin: 30px auto;
+		padding: 0 10px;
+		text-align: center;
+	}
+		.content1 li,.content2 li{
+			line-height: 30px;
+			list-style: none;
+
+		}
+	</style>
+</head>
+<body>
+	<div class="area">
+		<ul class="content1">
+			<li>我是无缝滚动1</li>
+			<li>我是无缝滚动2</li>
+			<li>我是无缝滚动3</li>
+			<li>我是无缝滚动4</li>
+			<li>我是无缝滚动5</li>
+			<li>我是无缝滚动6</li>
+			<li>我是无缝滚动7</li>
+			<li>我是无缝滚动8</li>
+			<li>我是无缝滚动9</li>
+		</ul>
+		<ul class="content2"></ul>
+	</div>
+		<div class="wrap">
+		<ul class="content1">
+			<li>我是无缝滚动1</li>
+			<li>我是无缝滚动2</li>
+			<li>我是无缝滚动3</li>
+			<li>我是无缝滚动4</li>
+			<li>我是无缝滚动5</li>
+			<li>我是无缝滚动6</li>
+			<li>我是无缝滚动7</li>
+			<li>我是无缝滚动8</li>
+			<li>我是无缝滚动9</li>
+		</ul>
+		<ul class="content2"></ul>
+	</div>
+</body>
+<script type="text/javascript">
+	var area=document.getElementsByClassName('area')[0];
+	var content1=document.getElementsByClassName('content1')[0];
+	var content2=document.getElementsByClassName('content2')[0];
+	var time=50;
+	content2.innerHTML=content1.innerHTML;
+	function scrollUp(){
+		if(area.scrollTop>=content1.offsetHeight){
+			area.scrollTop=0;
+		}else{
+		area.scrollTop++;
+		}
+	}
+	var timer=setInterval('scrollUp()',time);
+	area.onmouseover=function(){
+		clearInterval(timer);
+	}
+	area.onmouseout=function(){
+		timer=setInterval('scrollUp()',time)
+	}
+
+
+	//单行显示
+	var wrap=document.getElementsByClassName('wrap')[0];
+	var content=document.getElementsByClassName('content1')[1];
+	var copy=document.getElementsByClassName('content2')[1];
+	var iLiHeight=30;
+	var speed=50;
+	var delay=2000;
+	var times;
+	copy.innerHTML=content.innerHTML;
+
+	function scroll(){
+		if(wrap.scrollTop % iLiHeight ==0){
+			clearInterval(times);
+			setTimeout('startMove()',delay);
+		}else{
+			wrap.scrollTop++;
+			if(wrap.scrollTop>=content.offsetHeight){
+				wrap.scrollTop=0;
+			}
+		}
+	}
+
+	function startMove(){
+	wrap.scrollTop++;
+	times=setInterval('scroll()',speed);
+}
+setTimeout('startMove()',delay)
+</script>
+</html>

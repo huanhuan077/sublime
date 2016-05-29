@@ -1,0 +1,275 @@
+body,header,footer,ul,li,h1,h2,h3,h4,h5,img,button{
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+@base_color:#333333;
+
+.rounded-corners (@radius: 5px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  -ms-border-radius: @radius;
+  -o-border-radius: @radius;
+  border-radius: @radius;
+}
+
+a{
+  text-decoration: none;
+  color: @base_color;
+}
+li{list-style: none;}
+body{
+  width: 100%;
+}
+html{
+  font-size: 62.5%;
+  font-family: "微软雅黑", serif;
+}
+
+.seller_info{
+  background-color: #ffffff;
+  color: @base_color;
+  padding: 10px 2% 10px 2%;
+  border-bottom: 1px solid #DDDDDD;
+
+  .tx_img{
+    width:60px;
+    .rounded-corners(50%);
+    float: left;
+    margin-left: 1%;
+  }
+
+  a{
+    display: block;
+
+    .admin{
+      margin: 3px 5px;
+      line-height: 30px;
+      font-size: 18px;
+      font-weight: normal;
+
+      img{
+        display: inline-block;
+        width: 15px;
+        margin:0 1%;
+      }
+    }
+  }
+
+  #map_btn h5{
+
+    .address{
+      font-size: 15px;
+      font-weight: normal;
+    }
+
+    img{
+      width: 15px;
+      vertical-align: bottom;
+      margin:0 1%;
+    }
+  }
+}
+
+.flex{
+  display: flex;
+  display: -webkit-flex;
+  display: -moz-box; /* Firefox */
+  display: -ms-flexbox; /* IE10 */
+  display: -webkit-box; /* Safari */
+  display: -webkit-flex; /* Chrome, WebKit */
+  flex-wrap: nowrap;
+}
+
+#allmap {
+  display: none;
+  margin-top: 10px;
+  width:100%;
+  height: 180px;
+}
+
+.box{
+  height: 270px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+
+  .list{
+    position: absolute;
+    left: 0;
+    top:0;
+    .flex;
+    margin-top: 5px;
+
+    .flower{
+      height: 290px;
+      margin: 5px 1%;
+      width: 200px;
+      border: 1px solid #DDDDDD;
+      background: #eeeeee;
+      .rounded-corners(7px);
+
+      img{
+        width: 96%;
+        margin-left: 2%;
+      }
+
+      .name{
+        text-align: center;
+        font-weight: normal;
+        padding: 5px 0;
+      }
+
+      span{
+        display: inline-block;
+        padding: 0 2%;
+        background:#f84f00;
+        color: #ffffff;
+        float: right;
+        margin-top: 5px;
+        margin-right: 5px;
+        .rounded-corners(4px);
+      }
+
+      .price{
+        margin-left: 2%;
+        color: #888888;
+        text-decoration: line-through;
+      }
+    }
+
+    .content(@content:"¥"){
+      content: @content;
+      display: inline-block;
+    }
+    .discount_price{
+      margin-left: 2%;
+      font-size: 16px;
+      color: #f84f00;
+      display: inline-block;
+
+      &:before{
+        .content;
+      }
+    }
+
+    .price{
+
+      &:before{
+        .content;
+      }
+    }
+  }
+}
+
+
+form{
+  width:93.75%;
+  margin:0 auto;
+  border-top:1px solid #DDDDDD;
+  color: @base_color;
+
+  div{ border-bottom:1px solid #DDDDDD;}
+
+  span{ font-size:16px;}
+
+  .div1{height: 50px;}
+
+  .div2{
+    height: 80px;
+
+    span{
+      position: relative;
+      left: 0;
+      top: -28px;
+    }
+  }
+
+  .div3{
+    height: 45px;
+    line-height: 40px;
+
+    #number{
+      display: inline-block;
+      margin-left: 10%;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    button{
+      width: 8%;
+      height: 25px;
+      margin-left: 5px;
+      font-size: 18px;
+      color: @base_color;
+      border: none;
+      background: #DDDDDD;
+      outline: none;
+    }
+  }
+
+  .div4{
+    border: none;
+    height: 80px;
+
+    span{
+      position: relative;
+      left: 0;
+      top: -28px;
+    }
+  }
+
+  textarea{
+    margin-top: 5px;
+    width: 70%;
+    margin-left: 20px;
+    line-height: 20px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+  }
+
+  input{
+    width: 70%;
+    height:35px;
+    outline:none;
+    border:none;
+    font-size:16px;
+    margin-left:20px;
+    margin-top: 5px;
+  }
+}
+
+footer{
+  width: 100%;
+  background: #e8e8e8;
+  margin-top: 10px;
+
+  .back{
+    color: #888888;
+    font-weight: bold;
+    text-align: center;
+    height: 45px;
+    display:inline-block;
+    width: 15%;
+
+    img{
+      width: 14px;
+      margin-top: 10.5px;
+      margin-left: 10%;
+    }
+  }
+
+  .pay{
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    line-height: 45px;
+    float: right;
+    width: 75%;
+    background: #f84f00;
+    opacity: .9;
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>带缓冲效果的弹出广告</title>
+		<style type="text/css">
+			#dbmove{
+				width: 0px;
+				height: 30px;
+				background-color: #eee;
+				float: left;
+				margin-right:2px;
+
+			}
+			#dbhide{
+				width: 40px;
+				line-height: 30px;
+				background-color: yellow;
+				float: left;
+				margin-right: 2px;
+				display: none;
+				color: #666;
+				text-align: center;
+				cursor: pointer;
+			}
+			#dbshow{
+				width: 60px;
+				line-height: 30px;
+				background-color: red;
+				float: left;
+				color: #999;
+				text-align: center;
+				cursor: pointer;
+			}
+		</style>
+		<script src='../js/jquery-1.11.3.min.js'></script>
+	</head>
+	<body>
+		<div id="dbmove"></div>
+		<div id="dbhide">隐藏</div>
+		<div id="dbshow">打开</div>
+		<script type="text/javascript">
+			$(function(){
+		$('#dbshow').click(function(){
+			$(this).hide();
+			$('#dbmove').animate({width:150},500,function(){
+				$('#dbhide').show();
+			});
+		});
+		$('#dbhide').click(function(){
+			$(this).hide();
+			$('#dbmove').animate({width:0},500,function(){
+				$('#dbshow').show();
+			})
+		})
+		});
+		</script>
+	</body>
+</html>

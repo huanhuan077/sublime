@@ -1,0 +1,113 @@
+body {
+    font-family: "Helvetica Neue","Helvetica","Lucida Grande","Arial","Hiragino Sans GB","Microsoft Yahei","WenQuanYi Micro Hei","sans-serif";
+}
+.jumbotron{
+    margin-bottom: 0;
+}
+.site-header{
+    background: #27AE60;
+    text-align: center;
+    color: #ffffff;
+}
+.site-nav{
+    position: absolute;
+    top:15px;
+    right:30px;
+    z-index: 100;
+}
+.site-nav a{
+    color: #eee;
+    padding:0 10px;
+}
+
+@media screen and (min-width: 768px) {
+    .site-header h1{
+        font-size: 56px;
+        text-shadow: -5px 5px 0 rgba(0,0,0,0.1);
+    }
+}
+.site-header p{
+    font-size: 22px;
+    font-weight: 200;
+    color: #f4f4f4;
+}
+.site-header span{
+    font-size: 14px;
+}
+.site-header .form-group{
+    position: relative;
+    margin-top: 40px;
+    margin-bottom: 25px;
+
+}
+.site-header .search{
+    text-align: center;
+    font-size: 16px;
+    padding: 14px 0;
+    height: auto;
+}
+.site-header .fa{
+    position: absolute;
+    top:15px;
+    right:25px;
+    color: #eee;
+    font-size: 24px;
+}
+.mostused-packages ul{
+    margin-bottom: 0;
+}
+.mostused-packages a{
+    -webkit-filter:grayscale(0.9);
+    opacity: 0.6;
+}
+.mostused-packages a:hover{
+    -webkit-filter:none;
+    opacity: 1;
+}
+.mostused-packages img{
+    max-height: 32px;
+
+}
+.mostused-packages li{
+    padding-right: 36px;
+}
+.container .help-block{
+    display: inline-block;
+    margin-left: 32px;
+}
+.container .help-block a{
+    color: #aaa;
+}
+.packages-list-container{
+    margin-top: 50px;
+}
+.footer{
+    padding-top:40px;
+    margin-top:80px;
+    border:1px solid #26aa5e;
+    background: #26aa5e;
+    color: #fff;
+}
+.footer  a{
+    color: #fff;
+    border-bottom: dotted 1px #a9dfbf;
+    text-decoration: none;
+}
+.footer a:hover{
+    border-bottom: 1px solid #fff;
+}
+.footer-sponsors a{
+    border-bottom: none;
+}
+.footer-sponsors a:hover{
+    border-bottom: none;
+}
+.copy-right{
+    text-align: center;
+    line-height: 46px;
+    background: rgba(51,51,51,0.08);
+    height:46px;
+}
+.copy-right a{
+    margin:0 14px;
+}

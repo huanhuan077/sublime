@@ -1,0 +1,48 @@
+
+.header{
+    padding: 14px;
+    background: #1b1c1d;
+    text-align: center;
+    display: -webkit-flex;
+    justify-content: center;
+}
+.action{
+    position: relative;
+    display: -webkit-flex;
+    flex-wrap: nowrap;
+}
+.action .fa{
+    position: absolute;
+    left:16px;
+    line-height: 65px;
+    font-size: 1.7em;
+    color: #aaa;
+}
+input[type="text"]{
+    padding: 16px 24px 16px 64px;
+    font-size: 1.7em;
+    vertical-align: middle;
+    border: none;
+    border-radius: 4px 0 0 4px;
+}
+.button-default{
+    text-align: center;
+    min-width: 61px;
+    line-height: 65px;
+    border-radius: 0 4px 4px 0;
+    background-color: #e0e1e2;
+    border: none;
+}
+.ui.dropdown {
+    padding:0 8px;
+    font-family: Lato,Helvetica Neue,Arial,Helvetica,sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    text-align: center;
+    -webkit-transition: box-shadow 0.1s ease, width 0.1s ease;
+    transition: box-shadow 0.1s ease, width 0.1s ease;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}

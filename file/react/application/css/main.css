@@ -1,0 +1,307 @@
+html {
+    font-size: 62.5%;
+    font-family: "微软雅黑", sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.store {
+    width: 100%;
+}
+
+.music {
+    width: 36px;
+    position: absolute;
+    right: 16px;
+    top: 6px;
+}
+
+.pause {
+    -webkit-animation-play-state: paused !important;
+    -moz-animation-play-state: paused !important;
+    -o-animation-play-state: paused !important;
+    -ms-animation-play-state: paused !important;
+    animation-play-state: paused !important;
+}
+
+.rotate {
+    width: 36px;
+    position: absolute;
+    right: 16px;
+    top: 6px;
+    -ms-animation: rotate 5s infinite linear;
+    -moz-animation: rotate 5s infinite linear;
+    -webkit-animation: rotate 5s infinite linear;
+    animation: rotate 5s infinite linear;
+}
+
+@-moz-keyframes rotate {
+    0% {
+        -moz-transform: rotate(0deg);
+    }
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes rotate {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@-ms-keyframes rotate {
+    0% {
+        -ms-transform: rotate(0deg);
+    }
+    100% {
+        -ms-transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.share {
+    width: 36px;
+    position: absolute;
+    right: 16px;
+    top: 56px;
+}
+
+.share_div {
+    display: none;
+    position: absolute;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.8;
+}
+
+.shareBg {
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 8px;
+}
+
+.time {
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    font-size: 1.6rem;
+    color: #333;
+    line-height: 30px;
+    background: url("../images/index_date.png") no-repeat 16px 6px;
+    background-size: 36px;
+}
+
+.time:before {
+    content: '';
+    display: inline-block;
+    width: 70px;
+}
+
+.map {
+    border-bottom: 1px solid #ddd;
+    padding: 8px 16px 10px 10px;
+}
+
+.map .address {
+    min-height: 36px;
+    font-size: 1.6rem;
+    line-height: 24px;
+    padding-left: 60px;
+    color: #333;
+    background: url("../images/index_add.png") no-repeat 6px 0;
+    background-size: 36px;
+}
+
+.map .see {
+    width: 100px;
+    height: 26px;
+    border: none;
+    outline: none;
+    background: none;
+    background: #ff6377;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 1.6rem;
+}
+
+#container {
+    height: 120px;
+    margin-left: 60px;
+    margin-top: 10px;
+    display: none;
+}
+
+.boss {
+    font-size: 1.6rem;
+    line-height: 24px;
+    padding: 8px 16px 0 10px;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+
+}
+
+.boss .thanks {
+    min-height: 36px;
+    padding-left: 60px;
+    background: url("../images/index_blessing.png") no-repeat 6px 0;
+    background-size: 36px;
+}
+
+.boss .sign {
+    text-align: right;
+    margin-top: 16px;
+}
+
+.list_wrap {
+    position: relative;
+    height: 92px;
+    overflow: hidden;
+}
+
+.pic_list {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 80px;
+    flex-flow: row nowrap;
+    display: flex;
+    display: -moz-box;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    margin: 6px 0;
+}
+
+.pic_list img {
+    width: 80px;
+}
+
+.pic_list li {
+    margin-right: 10px;
+}
+
+.friend {
+    padding-top: 10px;
+    background: #ebebeb;
+    padding-bottom: 16px;
+}
+
+#bless {
+    width: 100%;
+    font-size: 1.6rem;
+    line-height: 40px;
+    text-align: center;
+    color: #666;
+    background: #fff url("../images/index_blessinglist_arrow.png") no-repeat 85% center;
+    background-size: 12px;
+}
+
+.friend li, .shade li {
+    position: relative;
+    background: #fff;
+    border-radius: 5px;
+    margin: 14px 16px 0 70px;
+    padding: 8px 6px 4px 10px;
+    font-size: 1.5rem;
+    line-height: 20px;
+    color: #333;
+}
+
+.friend li .name, .shade li .name{
+    display: block;
+    position: absolute;
+    left: -54px;
+    top: 50px;
+}
+
+.friend li:after, .shade li:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 25px;
+    left: -16px;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    border: solid 8px;
+    border-color: #ebebeb #ffffff #ebebeb #ebebeb;
+}
+
+.friend .man, .shade .man {
+    width: 50px;
+    position: absolute;
+    left: -60px;
+    top: 2px;
+    border-radius: 10px;
+}
+
+.friend .flower, .shade .flower {
+    width: 64px;
+    height: 64px;
+    margin-top: 6px;
+    border-radius: 6px;
+}
+
+.also_bless {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    line-height: 45px;
+    background: #f84f00;
+    opacity: .9;
+    text-align: center;
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+/* 更多祝福*/
+.shade {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #ebebeb;
+}
+
+.shade ul {
+    padding-top: 46px;
+    padding-bottom: 20px;
+}
+
+.shade .back {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 12;
+    width: 100%;
+    line-height: 40px;
+    padding-left: 34px;
+    background: #fff url("../images/index_blessinglist_back.png") no-repeat 10px center;
+    font-size: 1.6rem;
+    color: #666;
+    border-bottom: 1px solid #ddd;
+}
+
+

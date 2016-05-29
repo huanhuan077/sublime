@@ -1,0 +1,467 @@
+/* 清除默认样式 */
+body,ul,p,h3,h4{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: url("../img/body.png") repeat-x;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    border: none;
+    vertical-align: middle;
+}
+/* 顶部 */
+#top,#header,.content,.footer{
+    width: 960px;
+    margin: 0 auto;
+}
+#top{
+    overflow: hidden;
+}
+.top_menu{
+    width: 160px;
+    float: left;
+}
+.top_menu li{
+    float: left;
+    height: 24px;
+}
+.top_menu a,.top_bar a{
+    display: block;
+    font-size: 12px;
+    line-height: 24px;
+    padding:0 6px;
+    color: #92a7b9;
+}
+.top_bar a{
+    color: #edd087;
+}
+.top_menu a:hover,.top_bar a:hover{
+    color: #000;
+}
+.top_bar{
+    width: 120px;
+    float: right;
+}
+.top_bar li{
+    float: right;
+    height: 24px;
+}
+/* 广告条 */
+.banner{
+    height: 158px;
+}
+/* 导航栏 */
+.nav_t{
+    overflow: hidden;
+    font-size: 0;
+    background: url("../img/nav_tbg.png") repeat-x;
+}
+.nav_t li{
+    height: 32px;
+    display: inline-block;
+    margin-right: 2px;
+}
+.nav_t a{
+    display: block;
+    padding: 0 20px;
+    font-size: 14px;
+    height: 32px;
+    line-height: 32px;
+    color: #fff;
+    font-weight: bold;
+}
+.nav_t a:hover{
+    background: url("../img/nav_tbg_hover.png") repeat-x;
+    color: #28679a;
+}
+.nav_b {
+    height: 40px;
+    margin-top: 4px;
+    background: url("../img/nav_b_bg.png") repeat-x;
+    position: relative;
+}
+/* 天气消息通知栏 */
+.nav_b span{
+    width: 48px;
+    height: 40px;
+    display: inline-block;
+    background: url("../img/nav_b_tip.png") 5px center  no-repeat;
+}
+.nav_b p{
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 52px;
+    font-size: 14px;
+    height: 40px;
+    line-height: 40px;
+}
+/* 清浮动 */
+.clear{
+    zoom: 1;
+}
+.clear:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+/* 首页内容区*/
+.content{
+    margin-top: 6px;
+    background-color: #e5f6f4;
+}
+.content .wrap_part1{
+    padding:10px;
+}
+/* 左侧主栏 */
+.content .main{
+    width: 670px;
+    border: 1px solid #c1eaec;
+    float: left;
+}
+.content .main_top{
+    height: 34px;
+    background: url("../img/main_bg.png") repeat-x;
+}
+.main_top h3{
+    text-align: center;
+    line-height: 34px;
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    color: #a35904;
+}
+.content .main_body{
+    background: #fff;
+    position: relative;
+}
+/* 图片自动切换 */
+.main_body .showBox{
+    width: 390px;
+    height: 302px;
+    position: relative;
+    overflow: hidden;
+    font-size: 0;
+    border: 2px solid gainsboro;
+    left: 4px;
+    top: 12px;
+}
+.main_body #wrap{
+    width: 1950px;
+    position: absolute;
+    left: 0;
+}
+.main_body #wrap img{
+    width: 390px;
+    height: 290px;
+}
+.main_body #info{
+    width: 390px;
+    position: absolute;
+    top: 290px;
+    left: 0;
+    font-size: 14px;
+}
+.main_body #info p{
+    line-height: 20px;
+    text-align: center;
+    padding: 4px 0 10px;
+}
+.main_body #info div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 390px;
+    background: #000;
+    opacity: 0.7;
+    filter: alpha(opacity:70);
+    color: #fff;
+}
+/* 主栏右侧*/
+.main_right{
+    width: 248px;
+    position: absolute;
+    right: 10px;
+    top: 12px;
+}
+.main_right h4{
+    color: #3372b6;
+    font-size: 14px;
+    line-height: 26px;
+    text-align: center;
+}
+.main_right p{
+    font-size: 12px;
+    line-height: 20px;
+    color: #4e4e4e;
+    padding: 0 8px;
+    text-indent: 26px;
+}
+.main_right ul{
+    padding-top: 12px;
+}
+.main_right li{
+    height: 26px;
+    border-bottom: 1px dashed #999999 ;
+}
+.main_right a{
+    font-size: 14px;
+    line-height: 26px;
+    color: #4e4e4e;
+    display: block;
+    padding: 0 8px 12px;
+}
+.main_right a:hover,.news_body a:hover{
+    color: red;
+}
+.content .main_bottom{
+    height: 34px;
+    position: relative;
+    background: url("../img/main_bg.png") 0 -34px repeat-x;
+}
+.main_bottom p{
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    font-size: 12px;
+}
+.main_bottom a{
+    color: #4e4e4e;
+}
+/* 右边通知公告 */
+.content .news{
+    width: 250px;
+    border: 1px solid #c1eaec;
+    float: right;
+    position: relative;
+}
+.content #news_top{
+    height: 34px;
+    background: url("../img/main_bg.png") repeat-x;
+}
+#news_top ul{
+    position: absolute;
+    left: 34px;
+    top: 18px;
+}
+#news_top li{
+    width: 96px;
+    height: 28px;
+    float: left;
+    margin-right: 2px;
+    background: #e8f0f2;
+}
+#news_top a:hover{
+    background: #3372b6;
+    color:#fff ;
+}
+#news_top a{
+    font-size: 14px;
+    line-height: 28px;
+    padding: 0 20px 0 20px;
+    display: block;
+    color: #4e4e4e ;
+}
+#news_body ul{
+    padding: 22px 20px 0;
+    display: none;
+}
+#news_body ul:first-child{
+    display: block;
+}
+#news_body li{
+    height: 26px;
+}
+#news_body a{
+    font-size: 12px;
+    color: #4e4e4e;
+}
+.content #news_body{
+    background: #fff;
+}
+.content .news_bottom{
+    height: 34px;
+    background: url("../img/main_bg.png") 0 -34px repeat-x;
+}
+/* 信息公开栏 */
+.information{
+    width: 940px;
+    margin: 0 10px;
+    background: url("../img/information_bg.gif") right 0 repeat-x;
+}
+/* 信息公开导航栏 */
+.information .info_bar{
+    width: 480px;
+    height: 48px;
+    padding: 22px 0 22px 154px ;
+    background: url("../img/info_logo.gif") 26px 12px no-repeat;
+}
+.info_bar li{
+    float: left;
+    width: 140px;
+    height: 24px;
+}
+.info_bar a{
+    font-size: 14px;
+    color: #4e4e4e;
+}
+.info_bar a:hover{
+    color: red;
+}
+/* 左边选项卡 */
+.info_left{
+    width: 270px;
+    height: 260px;
+    position: relative;
+    float: left;
+    background: #f9fffa url("../img/info_colum.gif") right 56px no-repeat;
+}
+#info_nav1,#info_nav3{
+    position: absolute;
+    top: 12px;
+    left: 8px;
+}
+#info_nav2{
+    position: absolute;
+    top: 12px;
+    left: 76px;
+}
+#info_nav1 li,#info_nav2 li,#info_nav3 li{
+    height: 24px;
+    float: left;
+    margin-right: 2px;
+    background: #dcf4ca;
+}
+#info_nav1 a,#info_nav2 a,#info_nav3 a{
+    font-size: 12px;
+    line-height: 24px;
+    color: #000;
+    display: block;
+    padding: 0 8px;
+}
+#info_nav1 a:hover,#info_nav2 a:hover,#info_nav3 a:hover{
+    color: #fff;
+    background: #1F8024;
+}
+#info_left_content ul,#info_middle_content ul,#info_right_content ul{
+    display: none;
+    position: absolute;
+    left:26px;
+    top: 56px;
+}
+#info_left_content ul:first-child,#info_middle_content ul:first-child,#info_right_content ul:first-child{
+    display: block;
+}
+#info_left_content li,#info_middle_content li,#info_right_content li{
+    height: 26px;
+}
+#info_left_content a,#info_middle_content a,#info_right_content a{
+    font-size: 12px;
+    line-height: 26px;
+    letter-spacing: 1px;
+    color:#4E4E4E;
+}
+#info_left_content a:hover{}
+
+/* 中间选项卡 */
+.info_middle{
+    float: left;
+    position: relative;
+    width: 400px;
+    height: 260px;
+    background: #f9fffa url("../img/info_colum.gif") right 56px no-repeat;
+}
+/* 右边选项卡 */
+.info_right{
+    width: 270px;
+    height: 260px;
+    position: relative;
+    float: left;
+    background: #f9fffa;
+}
+/* 办事服务与互动交流 */
+.work{
+    width: 940px;
+    padding: 10px;
+}
+.serve,.exchange{
+    width: 464px;
+    border: 1px solid #c1eaec;
+    float: left;
+}
+/* 办事服务 */
+.serve{
+    margin-right: 8px;
+}
+.serve_top{
+    height: 83px;
+    background: url("../img/serve_bg.png") no-repeat;
+}
+.serve_top p{
+    padding: 32px 0 0 160px;
+}
+.serve_top span{
+    font-size: 12px;
+}
+.serve_top a{
+    color: #4e4e4e;
+}
+.serve_top a:hover{
+    color: red;
+}
+.serve_body{
+    background: #fff;
+}
+.serve_bottom,.exchange_bottom{
+    height: 34px;
+    background: url("../img/main_bg.png") 0 -34px repeat-x;
+}
+/* 互动交流 */
+.exchange_top{
+    height: 85px;
+    background: url("../img/commun_bg.gif") no-repeat;
+}
+.exchange_body{
+    background: #fff;
+}
+/* 尾部部分 */
+.footer{
+  margin-top: 30px;
+    padding-bottom: 30px;
+}
+.footer ul{
+    width: 776px;
+    margin: 0 auto;
+}
+.footer_link{
+    height: 34px;
+    border-top: 1px dashed #4e4e4e;
+    border-bottom: 1px dashed #4e4e4e;
+}
+.footer_link li{
+    height: 34px;
+    float: left;
+}
+.footer_link li:first-child{
+    padding-left: 332px;
+}
+.footer_link a{
+    font-size: 14px;
+    line-height: 34px;
+    color: #000;
+}
+/* 尾部说明 */
+.footer_note{
+    padding-top: 6px;
+}
+.footer_note li{}
+.footer_note span{
+    color: #557e9a;
+    font-size: 12px;
+    line-height: 24px;
+}

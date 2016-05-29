@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>touches</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no"/>
+    <script type="text/javascript" src="../js/touchs.js"></script>
+    <style>
+        body, ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .picWrap {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .piclist {
+            overflow: hidden;
+        }
+
+        .piclist li {
+            float: left;
+        }
+
+        .btn {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+
+        .btn li {
+            width: 10px;
+            height: 10px;
+            border-radius: 5px;
+            border: 1px solid #999;
+            float: left;
+
+            margin-right: 6px;
+        }
+
+        .active {
+            background: goldenrod;
+        }
+    </style>
+</head>
+<body>
+<div class="picWrap">
+    <ul class="piclist">
+        <li><img src="../img/gyy1.jpeg" alt="图片"/></li>
+        <li><img src="../img/gyy2.jpg" alt="图片"/></li>
+        <li><img src="../img/gyy3.jpg" alt="图片"/></li>
+    </ul>
+</div>
+<ul class="btn">
+    <li class="active"></li>
+    <li></li>
+    <li></li>
+</ul>
+<!--<script type="text/javascript">-->
+  <!---->
+<!--</script>-->
+</body>
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>测试</title>
+        <style type="text/css">
+
+      
+        .wrap{
+            display:-webkit-flex;
+            flex-direction:row;
+            justify-content:space-between;
+            flex-wrap:wrap;
+        }
+        .container {
+        width: 300px;
+        height: 300px;
+        margin: 30px auto;
+        font-size: 18px;
+        color: red;
+        /*background: #faa;*/
+        background: repeating-linear-gradient(30deg,
+        #faa,
+        #faa 15px,
+        #58a 0,
+        #58a 30px);
+        box-shadow: 0 0 0 10px #eeeeee;
+        }
+        .box1 {
+        width: 100px;
+        height:100px;
+        background: #fff;
+        border:10px solid hsla(0,0%,100%,.5);
+        margin-left: 20px;
+        margin-top: 20px;
+        background-clip: padding-box;
+        }
+        input {
+        color: currentColor;
+        font-size: inherit;
+        }
+        .container:after {
+        position: absolute;
+        top: 300px;
+        content: '';
+        width: 0;
+        height: 0;
+        display: block;
+        border: 10px solid #000;
+        border-color: transparent red transparent transparent;
+        }
+        .box2{
+        width: 100px;
+        height:100px;
+        background: tan;
+        border-radius: 4px;
+        box-shadow: 0 0 0 2px #655;
+        outline:10px solid #655;
+        }
+        .box3{
+        width: 400px;
+        height: 200px;
+        margin:10px auto;
+        border: 1em solid transparent;
+        background: linear-gradient(white, white) padding-box,
+        url(http://csssecrets.io/images/stone-art.jpg) border-box  0 / cover;
+        
+        /* Styling & enable resize */
+        /*width: 21em;*/
+        padding: 1em;
+        overflow: hidden;
+        resize: both;
+        font: 100%/1.6 Baskerville, Palatino, serif;
+        }
+        .box4{
+        padding: 1em;
+        border: 1em solid transparent;
+        background: linear-gradient(white, white) padding-box,
+        repeating-linear-gradient(-45deg, red 0, red 12.5%, transparent 0, transparent 25%,
+        #58a 0, #58a 37.5%, transparent 0, transparent 50%) 0 / 6em 6em;
+        
+        width: 5em;
+        height: 4em;
+        font: 100%/1.6 Baskerville, Palatino, serif;
+        }
+
+        @keyframes ants { to { background-position: 100% 100% } }
+        .box5 {
+            margin: 1em;
+            padding: 1em;
+            border: 1px solid transparent;
+            background: linear-gradient(white, white) padding-box,
+            repeating-linear-gradient(-45deg, black 0, black 25%, transparent 0, transparent 50%) 0 / .6em .6em;
+            animation: ants 12s linear infinite;
+            
+            max-width: 20em;
+            font: 100%/1.6 Baskerville, Palatino, serif;
+            }
+
+            .button{
+                display:inline-block;
+                width:100px;
+                height:20px;
+                position:relative;
+                background:transparent;
+                color: #fff;
+                text-align: center;        }
+        .button:before{
+            transform:skewX(45deg);
+            position:absolute;
+            content: '';
+            top: 0;
+            left:0;
+            bottom: 0;
+            right: 0;
+            background: blue;
+            z-index: -1;
+
+        }
+
+        img{
+            max-width: 600px;
+            -webkit-clip-path:polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+            transition:1s;
+        }
+        img:hover{
+            -webkit-clip-path:polygon(0% 100%,100% 100%, 100% 0%, 0% 0%);
+        }
+
+        .nav{
+            position: relative;
+            z-index: 1;
+            padding: 1em;
+            font: 130%/2 Frutiger LT Std, sans-serif;
+        }
+        .nav>a{
+        
+            position: relative;
+            display: inline-block;
+            padding: 0.3em 1em 0;
+            color: inherit;
+            text-decoration: none;
+            margin: 0 -0.3em;
+
+        }
+        .nav a:before{
+            border: 1px solid rgba(0,0,0,0.4);
+            border-bottom: none;
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: -1;
+            border-radius: .5em .5em 0 0;
+            background: #ccc linear-gradient(hsla(0,0%,100%,0.6),hsla(0,0%,100%,0));
+            box-shadow: 0 0.15em #fff inset;
+            transform: scale(1.1,1.3) perspective(0.5em) rotateX(5deg);
+            transform-origin: bottom;
+
+        }
+
+        .pie{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: yellowgreen;
+            background-image: linear-gradient(to right,transparent 50%, currentColor 0 );
+            color: #655;
+
+        }
+        .pie:before{
+            content: '';
+            display: block;
+            margin-left: 50%;
+            height: 100%;
+            background-color: inherit;
+            border-radius: 0 100% 100% 0/50%;
+            transform-origin:left;
+            animation: spin 3s linear infinite,bg 6s step-end infinite;
+
+
+        }
+        @keyframes spin{
+            to{transform:rotate(0.5turn);}
+        }
+        @keyframes bg{
+            50%{
+                background: currentColor;
+
+            }
+        }
+        @keyframes bgs{
+            50%{
+                background-color: #655;
+            }
+        }
+
+        .pies{
+            display: inline-block;
+            position: relative;
+            width: 100px;
+            line-height: 100px;
+            border-radius: 50%;
+            background-color: yellowgreen;
+            background-image: linear-gradient(to right,transparent 50%,#655 0);
+            color: transparent;
+            text-align: center;
+
+        }
+        .pies:before{
+            position: absolute;
+            top: 0;
+            left: 50%;
+            content: '';
+            width: 50%;
+            height: 100%;
+            border-radius: 0 100% 100% 0 /50%;
+            background-color: inherit;
+            transform-origin: left;
+            animation: spin 50s linear infinite,bgs 100s step-end infinite;
+            animation-play-state: paused;
+            animation-delay:inherit;
+
+        }
+        </style>
+    </head>
+    <body>
+    <div class="wrap">
+        <div class="container">
+            <div class="box1"></div>
+            <input type="button" value="inherit">
+        </div>
+        <div class="box2"></div>
+        <div class='box3'>I have a nice stone art border</div>
+        <div class="box4"></div>
+        <div class="box5">i will go to school</div>
+        <div class="button">click me</div>
+        <img src="../img/1.jpg" alt="">
+        </div>
+        <div class="nav">
+            <a href="javascript:;">Home</a>
+            <a href="javascript:;">Projects</a>
+            <a href="javascript:;">About</a>
+        </div>
+        <div class="pie"></div>
+        <div class="pies">0%</div>
+        <div class="pies">20%</div>
+        <div class="pies">40%</div>
+        <div class="pies">60%</div>
+        <div class="pies">80%</div>
+    </body>
+    <script type="text/javascript">
+    var addEvent=function(obj,event,fn){
+        if(obj.addEventListener){
+            obj.addEventListener(event,fn,false);
+        }else{
+            obj.attachEvent('on'+event,fn);
+        }
+    }
+
+    //饼图
+    function $$(selector, context) {
+    context = context || document;
+    var elements = context.querySelectorAll(selector);
+    return Array.prototype.slice.call(elements);
+}
+
+$$('.pies').forEach(function(pie) {
+    var p = pie.textContent;
+    pie.style.animationDelay = '-' + parseFloat(p) + 's';
+});
+    </script>
+</html>

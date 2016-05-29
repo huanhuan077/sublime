@@ -1,0 +1,220 @@
+a{
+    text-decoration: none;
+    color: #333333;
+}
+li{list-style: none;}
+body{
+    width: 100%;
+    background-color: #fff;
+}
+html{
+    font-size: 62.5%;
+    font-family: "微软雅黑", serif;
+}
+.seller_info{
+    background-color: #ffffff;
+    color: #333333;
+    padding: 10px 2% 10px 2%;
+    border-bottom: 1px solid #DDDDDD;
+}
+.seller_info .tx_img{
+    width:60px;
+    border-radius: 50%;
+    float: left;
+    margin-left: 1%;
+}
+.seller_info a{
+    display: block;
+}
+.seller_info a .admin{
+    margin: 3px 5px;
+    line-height: 30px;
+    font-size: 18px;
+    font-weight: normal;
+}
+.seller_info a .admin img{
+    display: inline-block;
+    width: 15px;
+    margin:0 1%;
+}
+.seller_info #map_btn h5 .address{
+    font-size: 15px;
+    font-weight: normal;
+}
+.seller_info #map_btn h5  img{
+    width: 15px;
+    vertical-align: bottom;
+    margin:0 1%;
+}
+
+/*地图*/
+#allmap {
+    display: none;
+    margin-top: 10px;
+    width:100%;
+    height: 180px;
+}
+/*商品*/
+.box{
+    height: 300px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin: 10px 0;
+}
+.list{
+    position: absolute;
+    left: 0;
+    top:0;
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-box; /* Firefox */
+    display: -ms-flexbox; /* IE10 */
+    display: -webkit-box; /* Safari */
+    display: -webkit-flex; /* Chrome, WebKit */
+    flex-wrap: nowrap;
+}
+.list .flower{
+    height: 290px;
+    margin: 5px 1%;
+    width: 200px;
+    border: 1px solid #DDDDDD;
+    background: #eeeeee;
+    border-radius: 7px;
+}
+.list .flower img{
+    width: 96%;
+    margin-left: 2%;
+}
+.list .flower .name{
+    text-align: center;
+    font-weight: normal;
+    padding: 5px 0;
+}
+.list .flower .discount_price:before{
+    content: "¥";
+    display: inline-block;
+}
+.list .flower .price:before{
+    content: "¥";
+    display: inline-block;
+}
+.list .flower .discount_price{
+    margin-left: 2%;
+    font-size: 16px;
+    color: #f84f00;
+    display: inline-block;
+}
+.list .flower span{
+    display: inline-block;
+    padding: 0 2%;
+    background:#f84f00;
+    color: #ffffff;
+    float: right;
+    margin-top: 5px;
+    margin-right: 5px;
+    border-radius: 4px;
+}
+.list .flower .price{
+    margin-left: 2%;
+    color: #888888;
+    text-decoration: line-through;
+}
+/*表格*/
+form{
+    width:93.75%;
+    margin:0 auto;
+    border-top:1px solid #DDDDDD;
+    color: #333333;
+}
+form div.border{ border-bottom:1px solid #DDDDDD;}
+form span{
+    font-size:16px;
+}
+form .div1{
+    height: 50px;
+}
+form .div2 span{
+    position: relative;
+    left: 0;
+    top: -28px;
+}
+form .div2{
+    height: 80px;
+}
+form .div4 span{
+    position: relative;
+    left: 0;
+    top: -28px;
+}
+form .div3{
+    height: 45px;
+    line-height: 40px;
+}
+form .div3 #number{
+    display: inline-block;
+    margin-left: 10%;
+    font-size: 22px;
+    font-weight: bold;
+}
+form .div3 button{
+    width: 8%;
+    height: 25px;
+    margin-left: 5px;
+    font-size: 18px;
+    color: #333333;
+    border: none;
+    background: #DDDDDD;
+    outline: none;
+}
+form .div4{
+    border: none;
+    height: 80px;
+}
+form textarea{
+    margin-top: 5px;
+    width: 70%;
+    margin-left: 20px;
+    line-height: 20px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+}
+form input{
+    width: 70%;
+    height:35px;
+    outline:none;
+    border:none;
+    font-size:16px;
+    margin-left:20px;
+    margin-top: 5px;
+}
+footer{
+    width: 100%;
+    background: #e8e8e8;
+    margin-top: 10px;
+}
+footer .back{
+    color: #888888;
+    font-weight: bold;
+    text-align: center;
+    height: 45px;
+    display:inline-block;
+    width: 15%;
+}
+footer .back img{
+    width: 14px;
+    margin-top: 10.5px;
+    margin-left: 10%;
+}
+footer .pay{
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    line-height: 45px;
+    float: right;
+    width: 75%;
+    background: #f84f00;
+    opacity: .9;
+    font-size: 16px;
+}

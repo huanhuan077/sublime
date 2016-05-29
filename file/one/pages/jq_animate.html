@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>animate</title>
+    <style>
+        .div1{
+            width: 100px;
+            height:100px;
+            background: green;
+            position: relative;
+            left:0;
+        }
+    </style>
+    <script src="../js/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+<div class="div1"></div>
+<button class="btn1">动画</button>
+<button class="btn2">动画链</button>
+<p class="parent">父元素
+    <span class="span">子元素1</span>
+    <span>子元素2</span>
+</p>
+<button class="btn3">remove</button>
+<button class="btn4">empty</button>
+<script>
+    $(function(){
+        $(".btn1").click(function(){
+            $(".div1").animate({
+                left:"250px",
+                opacity:"0.5",
+                width:"200px",
+                height:"200px"
+            },"slow");
+        });
+        $(".btn2").click(function(){
+            $(".div1").css("background","red").slideUp(2000).slideDown();
+        })
+        $(".btn3").click(function(){
+           $(".parent").remove();
+        });
+        $(".btn4").click(function(){
+            $(".span").empty();
+        });
+    })
+</script>
+</body>
+</html>

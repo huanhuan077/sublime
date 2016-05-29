@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo1</title>
+    <script src="../build/react.js"></script>
+    <script src="../build/react-dom.js"></script>
+    <script src="../build/JSXTransformer.js"></script>
+</head>
+<body>
+<script type="text/jsx">
+    var Box = React.createClass({
+        getInitialState: function() {
+            return {windowWidth: window.innerWidth};
+        },
+
+        handleResize: function(e) {
+            this.setState({windowWidth: window.innerWidth});
+        },
+
+        componentDidMount: function() {
+            window.addEventListener('resize', this.handleResize);
+        },
+
+        componentWillUnmount: function() {
+            window.removeEventListener('resize', this.handleResize);
+        },
+
+        render: function() {
+            return <div>Current window width: {this.state.windowWidth}</div>;
+        }
+    });
+
+    ReactDOM.render(<Box />, document.body);
+</script>
+</body>
+</html>

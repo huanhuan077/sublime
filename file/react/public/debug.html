@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>Title</title>
+    <script>
+        var invitation={"uuid":"123456789","date_at":1456391952,"address":"\u516b\u4e00\u5e7f\u573a","name":"laferm","lat":"2323.000000","lng":"2332.000000","discount":6.5,"description":"\u6b22\u8fce\u5927\u5bb6\u3002\u3002\u3002\u3002\u3002","merchant":{"id":171,"name":"\u6d4b\u8bd5\u4e94\u53f7","address":"\u6c5f\u897f\u7701\u5357\u660c\u5e02\u7ea2\u8c37\u6ee9\u7ea2\u89d2\u6d32\u5b66\u5e9c\u5927\u9053899\u53f7\u6167\u8c37\u521b\u610f\u4ea7\u4e1a\u56ed","lat":"28.665928","lng":"115.822568","cover":{"id":164,"name":"phpB868.tmp","belong_id":171,"belong_type":"Merchant","url":"attachments\\Merchant\\2016-02-29\\phpB868.tmp","mime":"image\/jpeg","type":"cover","size":73127,"data":null,"created_at":"2015-02-05 22:26:47","updated_at":"2016-02-29 10:40:56"},"store":null,"area_name":"","online_time":1,"star_level":3,"is_certification":0,"paidOrdersCount":329,"loginLogsCount":590,"level":3114.5,"paid_orders_count":{"merchant_id":171,"aggregate":329,"status":"\u5df2\u8fc7\u671f","income":0},"login_logs_count":{"belong_id":171,"belong_type":"Merchant","aggregate":590}},"products":[{"id":1,"name":"\u4e00\u89c1\u949f\u60c5","price":100,"cover":{"id":403,"name":"tmpBB63.tmp","belong_id":1,"belong_type":"Product","url":"attachments\\Product\\2016-01-29\\tmpBB63.tmp","mime":"image\/jpeg","type":"cover","size":6219,"data":null,"created_at":"2016-01-29 17:15:20","updated_at":"2016-01-29 17:15:20"}},{"id":2,"name":"\u60f3\u4f60","price":99,"cover":{"id":404,"name":"tmp51D7.tmp","belong_id":2,"belong_type":"Product","url":"attachments\\Product\\2016-01-29\\tmp51D7.tmp","mime":"image\/jpeg","type":"cover","size":6575,"data":null,"created_at":"2016-01-29 17:15:58","updated_at":"2016-01-29 17:15:58"}},{"id":3,"name":"\u9047\u89c1","price":88,"cover":{"id":405,"name":"tmpB53F.tmp","belong_id":3,"belong_type":"Product","url":"attachments\\Product\\2016-01-29\\tmpB53F.tmp","mime":"image\/jpeg","type":"cover","size":6219,"data":null,"created_at":"2016-01-29 17:25:08","updated_at":"2016-01-29 17:25:08"}}],"wishes":[{"name":"\u5218\u8bd7\u8bd7","description":"\u795d\u8d3a\u8305\u53f0\u53e4\u9547\u5f00\u4e1a\u5927\u5409\uff0c\u751f\u610f\u5174\u9686\uff0c\u795d\u5927\u8001\u677f\u8d22\u6e90\u6eda\u6eda","counts":2,"comment":"\u795d\u798f\u8bed\u4e0d\u8981\u5199\u8fc7\u5b57\u4e86"}],"cover":null,"detail_covers":{}};
+        function completed(){
+            console.log('kasjlfj')
+            document.body.onhashchange=function(){
+                console.log('hahsh');
+                window.location.reload(true);
+            }
+        }
+        var appName = document.location.hash.replace('#','');
+        document.write('<link rel="stylesheet" href="./assets/'+appName+'.common.css"/>')
+    </script>
+    <script id="baidu" type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=9382be6fe79b10703bff94b0fb28051a"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+</head>
+
+<body onload="completed()">
+<div id="application"></div>
+</body>
+<script type="text/javascript" src="./assets/common.js"></script>
+<script>
+
+
+    document.write('<script type="text/javascript" src="./assets/'+appName+'.bundle.js"><\/script>')
+</script>
+<script type="text/javascript" src="/webpack-dev-server.js"></script>
+
+</html>

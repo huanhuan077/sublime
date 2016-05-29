@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>幻灯片切换</title>
+		<link rel="stylesheet" type="text/css" href="../css/ppt.css">
+		<script type="text/javascript" src="../js/ppt.js"></script>
+	</head>
+	<body>
+		<div class="slider">
+			<div class="main" id="template_main">
+				<div class="main-i" id="main_{{index}}">
+					<div class="caption">
+						<h2>{{h2}}</h2>
+						<h3>{{h3}}</h3>
+					</div>
+					<img src="../img/{{index}}.jpg" alt="主图">
+				</div>
+			</div>
+			<div class="ctrl" id="template_ctrl">
+				<a class="ctrl-i" id="ctrl_{{index}}" href="javascript:switchSlider({{index}});">
+					<img src="../img/{{index}}.jpg">
+				</a>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,18 @@
+.custom_select(@left,@right : 10px){
+  background:url("../images/dropdown.png") no-repeat @left center;
+  appearance: none;
+  padding: 3px @right 3px 3px;
+  background-size: 16px;
+}
+
+
+select[name=province]{
+  .custom_select(94%,30px);
+  font-size: 20px;
+}
+select[name=city]{
+  .custom_select(92%,20px);
+  font-size: 20px;
+}
+
+

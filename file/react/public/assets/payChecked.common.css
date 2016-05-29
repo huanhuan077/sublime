@@ -1,0 +1,177 @@
+body,header,footer,ul,li,h1,h2,h3,h4,h5,img,button,p{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    background: #e8e8e8;
+}
+header{
+    width: 100%;
+    padding: 20px 0;
+    background: #ffffff;
+}
+header h1{
+    display: inline-block;
+    margin-left: 10%;
+    width: 80%;
+    font-size: 20px;
+    text-align: center;
+}
+header h1 img{
+    width: 20px;
+}
+header h2{
+    text-align: center;
+    font-size: 12px;
+    margin-top: 5px;
+    color: #888888;
+}
+.call{
+    width: 96%;
+    display: block;
+    margin-top: 20px;
+    background: #ebf6ff;
+    color: #3baaff;
+    padding: 10px 2%;
+    text-align: left;
+    font-size: 16px;
+}
+.call img{
+    width: 20px;
+    vertical-align: bottom;
+}
+form{
+    background: #ffffff;
+    color: #333333;
+}
+form .borderW{
+    border-bottom:1px solid #DDDDDD;
+    width:95%;
+    margin: 0 auto;
+}
+form .inLine{
+    display: inline-block;
+    margin: 5px 5px;
+    font-size: 18px;
+}
+form .bill{
+    overflow: hidden;
+    padding: 20px 0;
+}
+form .bill img{
+    width: 20%;
+    float: left;
+}
+form .bill h2:before{
+    display: inline-block;
+    content: "\A5";
+}
+form .bill h3:before{
+    display: inline-block;
+    content: "\A5";
+}
+form .bill .discount_price{
+    color:#f84f00 ;
+    display: inline;
+}
+form .bill .price{
+    color: #888888;
+    font-size: 14px;
+    display: inline;
+    text-decoration: line-through;
+}
+form .bill span{
+    display: inline-block;
+    background:#f84f00 ;
+    color: #ffffff;
+    padding: 0 1%;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: normal;
+}
+form .fontS{
+    font-size: 16px;
+}
+form .spanW{
+    display: inline-block;
+    width: 75%;
+}
+form .divH{
+    line-height: 50px;
+}
+form .divH2{
+    height: 70px;
+}
+form .marL{
+    margin-left: 5%;
+}
+form .linH{
+   position: relative;
+   left: 0;
+    top:-19px;
+}
+form .marT{
+    margin-top: 8px;
+    line-height: 20px;
+}
+form .double{
+    margin:0 1% 0 8%;
+    font-weight: bold;
+    font-size: 24px;
+}
+footer{
+    background: #ffffff;
+    margin-top: 20px;
+    padding: 10px 0;
+}
+footer button{
+    line-height: 45px;
+    display: block;
+    width: 40%;
+    margin: 0 auto;
+    height: 45px;
+    font-size: 14px;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    background-color: #f84f00;
+    opacity: .9;
+    border-radius: 7px;
+}
+footer button img{
+    height: 15px;
+}
+footer p{
+    margin-top: 5px;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    color:#888888;
+}
+footer .tip{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left:0;
+    display: none;
+    z-index: 3;
+}
+footer .tip img{
+    width: 100%;
+}
+footer .shade{
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    background-color: #000000;
+    opacity: 0.5;
+    z-index: 2;
+    display: none;
+}

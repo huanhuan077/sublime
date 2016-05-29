@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="todoList">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../build/angular.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+</head>
+<body ng-controller="taskCtrl" >
+<div class="input-group">
+    <input type="text" class="form-control" ng-model="task">
+    <span class="input-group-button">
+        <button class="btn btn-default" ng-click="add()">按钮</button>
+    </span>
+</div>
+<h4 ng-if="tasks.length>0">任务列表</h4>
+<ul class="list-group">
+    <li class="list-group-item" ng-repeat="item in tasks track by $index">
+        {{item}}
+        <a ng-click="tasks.splice($index,1)">删除</a>
+    </li>
+</ul>
+<script type="text/javascript">
+    angular.module('todoList',[]).controller('taskCtrl',function($scope){
+        $scope.task='';
+        $scope.tasks=[];
+        $scope.add=function(){
+            $scope.tasks.push($scope.task);
+        }
+    })
+</script>
+</body>
+</html>

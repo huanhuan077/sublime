@@ -1,0 +1,32 @@
+.message{
+    position:relative;
+    width: 900px;
+    height: 70px;
+    background: #000;
+    padding:14px 20px;
+    font-family:"微软雅黑", sans-serif;
+    border-radius: 4px;
+}
+.fa-question{
+    opacity: 0.8;
+    color: #fff;
+    font-size: 2.9em;
+    position: absolute;
+    left: 20px;
+}
+.content{
+    position: absolute;
+    left: 70px;
+    width: 90%;
+    line-height: 22px;
+    color: #fff;
+
+}
+.content .head{
+    font-size: 16px;
+
+}
+.content p{
+    opacity: 0.9;
+    margin:0;
+}

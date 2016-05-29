@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jq_hide</title>
+    <script src="../js/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+<p id="content">welcome to nanchang !</p>
+<button class="btn">隐藏</button>
+<button class="btn1">显示</button>
+<button class="btn2">淡入</button>
+<button class="btn3">淡出</button>
+<button class="btn4">向下滑动</button>
+<button class="btn5">向上滑动</button>
+<script>
+    $(function(){
+        var flag=true;
+        $(".btn").click(function(){
+            if(flag){
+                $("#content").hide(2000);
+                flag=!flag;
+            }else{
+               $("#content").show("fast");
+                flag=!flag;
+            }
+        });
+
+        $(".btn1").click(function(){
+            $("#content").toggle();
+        });
+
+        $(".btn2").click(function(){
+            $("#content").fadeIn(2000);
+        });
+        $(".btn3").click(function(){
+            $("#content").fadeOut(2000);
+        });
+        $(".btn4").click(function(){
+            $("#content").slideDown(1000);
+        });
+        $(".btn5").click(function(){
+            $("#content").slideUp("slow");
+        });
+    });
+</script>
+</body>
+</html>

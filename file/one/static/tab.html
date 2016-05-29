@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tab（选项卡切换）</title>
+    <style>
+        .content{
+            width: 296px;
+            height: 198px;
+            border:1px solid #ddd;
+            margin: 30px auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .content ul{
+            padding:0;
+            margin:0;
+            width: 299px;
+            left:-1px;
+            position: absolute;
+            height: 36px;
+            list-style: none;
+            background: #f0f0f0;
+        }
+        .content ul li{
+            height: 36px;
+            width: 72.5px;
+            padding: 0 1px;
+            text-align: center;
+            line-height: 36px;
+            float: left;
+
+        }
+
+        .content ul li:hover{
+            border-right:1px solid #ddd;
+            border-left:1px solid #ddd;
+            background: #fff;
+            padding:0;
+        }
+    </style>
+</head>
+<body>
+<div class="content">
+    <ul>
+        <li>公告</li>
+        <li>规则</li>
+        <li>论坛</li>
+        <li>安全</li>
+    </ul>
+</div>
+</body>
+</html>

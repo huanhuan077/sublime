@@ -1,0 +1,304 @@
+.font(@size:1.6rem,@height:24px,@color:#333) {
+  font-size: @size;
+  line-height: @height;
+  color: @color;
+
+}
+
+.background(@paddingLeft:60px,@url:"../images/index_add.png",@left:6px,@right:0px) {
+  padding-left: @paddingLeft;
+  background: url(@url) no-repeat @left @right;
+  background-size: 36px;
+}
+
+.padding(@bottom:10px) {
+  border-bottom: 1px solid #ddd;
+  padding: 8px 16px @bottom 10px;
+}
+
+.position(@position:absolute,@top:0,@right:0,@bottom:0,@left:0,@display:none) {
+  position: @position;
+  top: @top;
+  left: @left;
+  right: @right;
+  bottom: @bottom;
+  display: @display;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "微软雅黑", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.store {
+  width: 100%;
+}
+
+.music(@top:6px) {
+  width: 36px;
+  position: absolute;
+  right: 16px;
+  top: @top;
+}
+
+.pause {
+  animation-play-state: paused !important;
+}
+
+.rotate {
+  .music();
+  animation-play-state: running;
+  animation: rotate 5s infinite linear;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.share {
+  .music(56px)
+}
+
+.shareBg(@top:8px) {
+  width: 100%;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: @top;
+}
+
+.shareBg {
+  .shareBg();
+}
+
+.share_div {
+  .shareBg(0px);
+  display: none;
+  z-index: 9;
+  height: 102%;
+  background: #000;
+  opacity: 0.8;
+}
+
+.time {
+  width: 100%;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+  .font(1.6rem, 30px, #333);
+  .background(0px, "../images/index_date.png", 16px, 6px);
+  &:before {
+    content: '';
+    display: inline-block;
+    width: 70px;
+  }
+}
+
+.map {
+  .padding();
+  .address {
+    .font();
+    .background()
+  }
+  .see {
+    width: 100px;
+    height: 26px;
+    border: none;
+    outline: none;
+    background: none;
+    background: #ff6377;
+    border-radius: 4px;
+    .font(1.6rem, 26px, #fff);
+  }
+}
+
+#container {
+  height: 120px;
+  margin-left: 60px;
+  margin-top: 10px;
+  display: none;
+}
+
+.boss {
+  .font();
+  .padding(0px);
+  .thanks {
+    min-height: 36px;
+    .background(60px, "../images/index_blessing.png", 6px, 0);
+  }
+  .sign {
+    text-align: right;
+    margin-top: 16px;
+  }
+}
+
+.list_wrap {
+  position: relative;
+  height: 92px;
+  overflow: hidden;
+}
+
+.pic_list {
+  .position(absolute, 0, 0, 0, 0, flex);
+  height: 80px;
+  flex-flow: row nowrap;
+  margin: 6px 0;
+  img {
+    width: 80px;
+  }
+  li {
+    margin-right: 10px;
+  }
+}
+
+.pictureWrap{
+  display: none;
+  width: 100%;
+  background: black;
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index: 6;
+}
+
+.pictures {
+  overflow: hidden;
+  width: 180px;
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -100px;
+  margin-left: -90px;
+  .pictureList {
+    display: flex;
+    flex-flow: row nowrap;
+    position: absolute;
+    height: 180px;
+  }
+  img {
+    width: 180px;
+  }
+}
+.dotList{
+  text-align: center;
+  position: absolute;
+  height: 10px;
+  bottom: 0px;
+  left:50%;
+}
+
+.dotList li{
+  width:10px;
+  height:10px;
+  border-radius: 50%;
+  background: #fff;
+  float: left;
+  margin-right: 6px;
+}
+.dotList .dotActive{
+  background: #636363;
+}
+.close{
+  color: #fff;
+  font-size: 4.0rem;
+  position: absolute;
+  top:10px;
+  right:30px;
+}
+
+#bless {
+  width: 100%;
+  .font(1.6rem, 40px, #666);
+  text-align: center;
+  background: #fff url("../images/index_blessinglist_arrow.png") no-repeat 85% center;
+  background-size: 12px;
+}
+
+.friend(@top:10px,@bottom:16px) {
+  padding-top: @top;
+  padding-bottom: @bottom;
+  background: #ebebeb;
+}
+
+.friend {
+  .friend();
+}
+
+.friend li, .shade li {
+  position: relative;
+  background: #fff;
+  border-radius: 5px;
+  margin: 14px 16px 0 70px;
+  padding: 8px 6px 4px 10px;
+  .font(1.5rem, 20px);
+}
+
+.friend li span.name, .shade li span.name{
+  .position(absolute, 50px, 0, 0, -54px, block);
+}
+
+.friend li:after, .shade li:after {
+  content: "";
+  .position(absolute, 25px, 0, 0, -16px, block);
+  width: 0;
+  height: 0;
+  font-size: 0;
+  border: solid 8px;
+  border-color: #ebebeb #ffffff #ebebeb #ebebeb;
+}
+
+.friend .man, .shade .man {
+  width: 50px;
+  .position(absolute, 2px, 0, 0, -60px, block);
+  border-radius: 10px;
+}
+
+.friend .flower, .shade .flower {
+  width: 64px;
+  height: 64px;
+  margin-top: 6px;
+  border-radius: 6px;
+}
+
+.also_bless {
+  text-decoration: none;
+  display: block;
+  .font(1.6rem, 45px, #fff);
+  width: 100%;
+  background: #f84f00;
+  opacity: .9;
+  text-align: center;
+}
+
+/* 更多祝福*/
+.shade {
+  .position(relative, 0, 0, 0, 0, block);
+  .friend(0, 0);
+  ul {
+    .friend(46px, 20px);
+  }
+  .back {
+    position: fixed;
+    top: 0;
+    left: 0;
+    .font(1.6rem, 40px, #666);
+    z-index: 12;
+    width: 100%;
+    padding-left: 34px;
+    background: #fff url("../images/index_blessinglist_back.png") no-repeat 10px center;
+    border-bottom: 1px solid #ddd;
+  }
+}
+

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="">
+<head>
+    <meta charset="UTF-8">
+    <title>angular_demo2</title>
+    <script src="../build/angular.js"></script>
+</head>
+<body>
+your name: <input type="text" placeholder="world" ng-model="yourname">
+<hr>
+    hello {{ yourname || "world"}}
+<p>
+    1+2={{1+2}}
+</p>
+<table>
+    <tr><td>row number</td></tr>
+    <tr ng-repeat="i in [0,1,2,3,4,5,6,7]">
+        <td>{{i+1}}</td>
+    </tr>
+</table>
+</body>
+</html>
